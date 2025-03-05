@@ -2,9 +2,9 @@ import streamlit as st
 
 
 def calculate_bmi(weight, height):
-    """Calculate BMI and return the category."""
-    if height <= 0 or weight <= 0:
-        return None, "Invalid input! Weight and height must be positive numbers."
+    """Calculate BMI and return category."""
+    if weight <= 0 or height <= 0:
+        raise ValueError("Weight and height must be positive numbers.")
 
     bmi = weight / (height**2)
 
@@ -17,22 +17,18 @@ def calculate_bmi(weight, height):
     else:
         category = "Obese"
 
-    return round(bmi, 2), category
+    return bmi, category
 
 
-# Streamlit UI
+# Streamlit App
 st.title("BMI Calculator")
 
-st.write("Enter your weight and height to calculate your BMI.")
-
-# Input fields
 weight = st.number_input("Enter your weight (kg)", min_value=0.0, format="%.2f")
 height = st.number_input("Enter your height (m)", min_value=0.0, format="%.2f")
 
 if st.button("Calculate BMI"):
     try:
         bmi, category = calculate_bmi(weight, height)
-        st.success(f"Your BMI is **{bmi}**")
-        st.info(f"Category: **{category}**")
+        st.success(f"Your BMI is {bmi:.2f}, which is categorized as {category}.")
     except ValueError as e:
         st.error(str(e))
