@@ -26,7 +26,7 @@ st.title("BMI Calculator")
 weight = st.number_input("Enter your weight (kg)", min_value=0.0, format="%.2f")
 height = st.number_input("Enter your height (m)", min_value=0.0, format="%.2f")
 
-if st.button("Calculate BMI"):
+if st.button("Calculate"):
     try:
         bmi, category = calculate_bmi(weight, height)
         st.success(f"Your BMI is {bmi:.2f}, which is categorized as {category}.")
