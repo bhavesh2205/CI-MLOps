@@ -1,18 +1,18 @@
 
 # 🚀 MLOps CI/CD Pipeline 
 
-## 📌 Introduction  
+## Introduction  
 **CI/CD (Continuous Integration and Continuous Deployment/Delivery)** is a software development practice that automates testing and deployment. It ensures **faster, reliable, and efficient software releases**.  
 
 This guide covers:  
-✔ **What is CI/CD?**  
-✔ **How CI/CD works?**  
-✔ **Key benefits and challenges**  
-✔ **Example CI/CD pipeline using GitHub Actions**  
+      **1.What is CI/CD?**  
+      **2.How CI/CD works?**  
+      **3.Key benefits and challenges**  
+      **4.Example CI/CD pipeline using GitHub Actions**  
 
 ---
 
-## 🛠️ What is CI/CD?  
+##  What is CI/CD?  
 
 | **Concept** | **Description** |
 |------------|---------------|
@@ -20,46 +20,46 @@ This guide covers:
 | **Continuous Deployment (CD)** | Automates the release of code to production without manual intervention. |
 | **Continuous Delivery** | Similar to CD, but requires manual approval before deploying to production. |
 
-📌 **CI/CD helps teams ship code faster with fewer errors!**  
+**CI/CD helps teams ship code faster with fewer errors!**  
 
 ---
 
-## 🔄 How CI/CD Works?  
+## How CI/CD Works?  
 
-### 1️⃣ Continuous Integration (CI)  
+### 1.Continuous Integration (CI)  
 - Developers push code to **GitHub/GitLab/Bitbucket**  
 - Automated tests check for errors  
-- If tests pass ✅, the code is merged into the main branch  
+- If tests pass , the code is merged into the main branch  
 
-### 2️⃣ Continuous Deployment (CD)  
+### 2.Continuous Deployment (CD)  
 - If CI is successful, the CD pipeline triggers  
 - The code is deployed automatically to production  
 - Monitoring ensures stability, and rollbacks happen if needed  
 
-### 3️⃣ CI/CD Workflow Example  
-1️⃣ Developer commits code to GitHub  
-2️⃣ **CI:** GitHub Actions runs unit tests 🧪  
-3️⃣ **CD:** If tests pass, deploy to AWS/GCP/Heroku 🚀  
-4️⃣ Monitor logs and performance 📊  
+### 3.CI/CD Workflow Example  
+1️. Developer commits code to GitHub  
+2️. **CI:** GitHub Actions runs unit tests  
+3. **CD:** If tests pass, deploy to AWS/GCP/Heroku 
+4. Monitor logs and performance  
 
 ---
 
-## 💡 Why Use CI/CD? (Benefits)  
-✅ **Faster Development** – Automates testing and deployment  
-✅ **Fewer Bugs** – Code is tested before release  
-✅ **Quick Rollbacks** – Easily revert bad deployments  
-✅ **Better Collaboration** – Teams work efficiently  
+##  Why Use CI/CD? 
+ **Faster Development** – Automates testing and deployment  
+ **Fewer Bugs** – Code is tested before release  
+ **Quick Rollbacks** – Easily revert bad deployments  
+ **Better Collaboration** – Teams work efficiently  
 
 ---
 
-## ⚠️ Challenges in CI/CD  
-❌ **Bad code can go live** – Requires strong tests  
-⚠️ **Deployment failures** – Need rollback strategies  
-🔍 **Monitoring is required** – To detect issues early  
+##  Challenges in CI/CD  
+ **Bad code can go live** – Requires strong tests  
+ **Deployment failures** – Need rollback strategies  
+ **Monitoring is required** – To detect issues early  
 
 ---
 
-## 🛠️ CI/CD Pipeline with GitHub Actions 
+##  CI/CD Pipeline with GitHub Actions 
 
 Create a **`.github/workflows/ci-cd.yml`** file:  
 
@@ -102,21 +102,21 @@ jobs:
 
 ```
 
-🔹 **If tests fail, deployment won’t happen!**\
-🔹 **You can deploy to AWS, GCP, or a cloud platform**
+ **If tests fail, deployment won’t happen!**\
+ **You can deploy to AWS, GCP, or a cloud platform**
 
 ---
 
-## 📌 Best Practices for CI/CD
+##  Best Practices for CI/CD
 
-✅ **Use feature flags** – Control releases without redeploying\
-✅ **Automate testing** – Unit, integration, and security tests\
-✅ **Monitor deployments** – Use logging tools (Prometheus, Datadog)\
-✅ **Secure credentials** – Store API keys safely (GitHub Secrets, AWS IAM)
+ **Use feature flags** – Control releases without redeploying\
+ **Automate testing** – Unit, integration, and security tests\
+ **Monitor deployments** – Use logging tools (Prometheus, Datadog)\
+ **Secure credentials** – Store API keys safely (GitHub Secrets, AWS IAM)
 
 ---
 
-## 📚 Learning Resources
+##  Learning Resources
 
 📖 [GitHub Actions Docs](https://docs.github.com/en/actions)\
 🚀 [Jenkins CI/CD Guide](https://www.jenkins.io/doc/)\
@@ -124,7 +124,7 @@ jobs:
 
 ---
 
-## 🎯 Summary
+##  Summary
 
 ✔ **CI automates testing**\
 ✔ **CD automates deployment**\
